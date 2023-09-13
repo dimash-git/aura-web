@@ -1,0 +1,78 @@
+.page {
+  position: relative;
+  height: calc(100vh - 50px);
+  max-height: -webkit-fill-available;
+  flex: auto;
+  justify-content: space-between;
+  justify-items: center;
+  background-color: #01010b;
+  background-size: calc(100% + 186px);
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 16px 12px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+}
+
+.header__energies {
+  max-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.header__energies-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.header__energies-title {
+  font-size: 14px;
+  color: #bbb9b8;
+  font-weight: 500;
+  width: 82px;
+}
+
+.header__energies-aura {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-size: 170%;
+  background-image: url("/goosebumps-aura.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  animation: pulse 1s alternate infinite;
+}
+
+.content__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 300px;
+}
+
+.content__buttons-item {
+    width: 100% !important;
+    border: solid #7b7570 2px;
+    border-radius: 25px !important;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}

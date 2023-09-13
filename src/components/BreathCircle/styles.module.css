@@ -1,0 +1,58 @@
+.outer-circle {
+  background-color: #38597f;
+  width: 250px;
+  height: 250px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  position: relative;
+  width: 240px;
+  height: 240px;
+  background-color: #69a8e7;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 500;
+  font-size: 20px;
+  animation-name: pulse;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  will-change: transform;
+}
+
+@keyframes text {
+  0% {
+    content: "Breathe in";
+  }
+  60% {
+    content: "Hold";
+  }
+  80% {
+    content: "Breathe out";
+  }
+  100% {
+    content: "Breathe out";
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.6);
+  }
+}

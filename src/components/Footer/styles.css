@@ -1,0 +1,18 @@
+
+.page-footer {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 2;
+  padding-bottom: 25px;
+  color: #8e8e93;
+  text-align: center;
+}
+
+.page-footer--white {
+  background-color: #fff;
+}
+
+.page-footer--black {
+  background-color: #04040a;
+  color: #fff;
+}

@@ -1,0 +1,68 @@
+.wallpaper-page {
+  position: relative;
+  width: 100%;
+}
+
+.wallpaper-image > img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.wallpaper-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #04040a;
+  width: 100%;
+  height: 500px;
+}
+
+.wallpaper-content {
+  color: #fff;
+  background-color: #04040a;
+  line-height: 1.3;
+  padding-bottom: 15px;
+  position: relative;
+  min-height: calc(100vh - 500px);
+}
+
+.wallpaper-content::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -30px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(0deg, #04040a, transparent);
+}
+
+.wallpaper-title,
+.wallpaper-subtitle {
+  color: #ea445a;
+}
+
+.wallpaper-subtitle {
+  margin-bottom: 5px;
+}
+
+.wallpaper-title,
+.wallpaper-forecast {
+  padding: 0 32px;
+  margin-bottom: 15px;
+}
+
+.btn-download {
+  position: absolute;
+  cursor: pointer;
+  top: 28px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  background-image: url(./Dowload.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

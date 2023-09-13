@@ -1,0 +1,9 @@
+.back-btn {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  left: 28px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}

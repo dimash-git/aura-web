@@ -1,0 +1,25 @@
+.page {
+  background-color: #000;
+  height: calc(100vh - 50px);
+  flex: auto;
+  padding-top: 22%;
+  background-image: url("/goosebumps-aura-click-icon-animation.png");
+  background-size: 100%;
+  background-position: center 0;
+  background-repeat: no-repeat;
+}
+
+.content {
+  text-align: center;
+}
+
+.title {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  color: white;
+  font-weight: 500;
+}

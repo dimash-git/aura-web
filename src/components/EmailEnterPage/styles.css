@@ -1,0 +1,47 @@
+.email-input {
+  width: 100%;
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.email-input > input {
+  appearance: none;
+  border: 1px solid #c7c7c7;
+  border-radius: 8px;
+  color: #121620;
+  font-size: 16px;
+  height: 48px;
+  line-height: 18px;
+  outline: none;
+  padding: 12px 12px 5px;
+  transition: border-color .3s ease;
+  width: 100%;
+}
+
+.email-input > input:focus {
+  border-color: #000;
+  transition-delay: .1s;
+}
+
+.email-input > input:focus + .email-input__placeholder,
+.email-input > input:not(:placeholder-shown) + .email-input__placeholder {
+  font-size: 12px;
+  top: 12px;
+  width: auto;
+}
+
+.email-input__placeholder {
+  color: #8e8e93;
+  font-size: 16px;
+  left: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: top .3s ease,color .3s ease,font-size .3s ease;
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

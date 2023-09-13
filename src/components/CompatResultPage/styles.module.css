@@ -1,0 +1,31 @@
+.page {
+  position: relative;
+  height: calc(100vh - 50px);
+  flex: auto;
+  max-height: -webkit-fill-available;
+  background-color: #000;
+  color: #fff;
+  overflow-y: scroll;
+}
+
+.title-container {
+    color: #e9445a;
+}
+
+.percent {
+    margin-bottom: 0;
+}
+
+.result-container {
+    width: 100%;
+}
+
+.result-container__title {
+    width: 100%;
+    text-align: left;
+}
+
+.result-container__text {
+    white-space:pre-wrap;
+    line-height: 1.2;
+}

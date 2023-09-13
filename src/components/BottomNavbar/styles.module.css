@@ -1,0 +1,50 @@
+.container {
+  position: fixed;
+  bottom: 0;
+  color: white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background: rgb(34, 25, 25);
+  width: 100%;
+  max-width: 560px;
+  z-index: 100;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+  gap: 7px;
+}
+
+.tab:hover {
+  transition: 0.3s all ease-in;
+  color: red;
+}
+.tab:hover .icon {
+  background: red;
+}
+
+.tab.active {
+  color: red;
+}
+
+.icon {
+  border-radius: 50px;
+  width: 30px;
+  height: 30px;
+  background: gray;
+}
+
+.tab.active .icon {
+  background: red;
+}

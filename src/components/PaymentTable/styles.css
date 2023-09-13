@@ -1,0 +1,59 @@
+.payment {
+  position: relative;
+  width: 100%;
+}
+
+.payment__table {
+  background: #fff;
+  border: 2px solid #000;
+  border-radius: 20px;
+  color: #000;
+  padding: 0 25px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.payment__total,
+.payment__item-summary {
+  display: flex;
+}
+
+.payment__total-price,
+.payment__item-price {
+  margin-left: auto;
+}
+
+.payment__total {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.payment__items {
+  font-size: 16px;
+  line-height: 1.1;
+}
+
+.payment__item {
+  margin-bottom: 5px;
+}
+
+.payment__item-description {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8e8e93;
+}
+
+.payment__item-summary {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.payment__information {
+  font-size: 12px;
+  line-height: 1.5;
+}

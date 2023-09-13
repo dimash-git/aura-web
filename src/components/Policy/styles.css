@@ -1,0 +1,36 @@
+.policy {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.policy p,
+.policy a {
+  color: #121620;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.policy a {
+  text-decoration: underline;
+}
+
+.policy--small p,
+.policy--small a {
+  font-size: 12px;
+}
+
+.policy--medium p,
+.policy--medium a {
+  font-size: 14px;
+}
+
+.policy--large p,
+.policy--large a {
+  font-size: 16px;
+}
+

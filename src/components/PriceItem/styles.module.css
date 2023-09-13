@@ -1,0 +1,40 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    border: solid #d6d2d2 2px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #30bf52;
+    border-color: #30bf52;
+    color: #fff;
+}
+
+.popular {
+    border-color: #30bf52;
+}
+
+.popular:after {
+    content: 'Most Popular';
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    left: -10px;
+    bottom: -25px;
+    background-color: #30bf52;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}

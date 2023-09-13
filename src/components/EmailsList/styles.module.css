@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background-color: #b7e9c3;
+  border-radius: 7px;
+  padding: 6px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #494747;
+  text-align: center;
+}
+
+.emails-container {
+  width: 100%;
+  height: 108px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+}
+
+.email-item {
+  margin-top: 0;
+  opacity: 1;
+  will-change: margin-top, opacity;
+}
+
+.hidden {
+  transition: all .5s ease;
+  margin-bottom: -26px;
+  opacity: 0;
+}

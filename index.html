@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preload" as="image" href="/leo.png" fetchpriority="high">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>AURA</title>
+    <style>
+      .splash-screen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        max-width: 560px;
+        padding: 0 32px;
+      }
+      .splash-screen img {
+        width: 100%;
+        animation-name: loading;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes loading {
+        from {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div class="splash-screen">
+        <img src="/leo.png" alt="Aura - Energy of your Horoscope">
+      </div>
+    </div>
+    <script src="https://js.chargebee.com/v2/chargebee.js"></script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

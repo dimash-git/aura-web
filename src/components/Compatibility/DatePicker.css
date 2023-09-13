@@ -1,0 +1,104 @@
+/* DatePicker.css */
+
+/* Container for the entire date picker */
+.date-picker-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  color: white;
+  background: transparent;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-picker-viewport {
+  flex: 1;
+  position: relative;
+  height: 160px; /* Adjust the max height as needed */
+  overflow: hidden;
+  padding: 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.date-picker-viewport::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.date-picker-viewport::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  /* background: linear-gradient(
+    #f7f7f7,
+    rgba(245, 245, 245, 0) 52%,
+    rgba(245, 245, 245, 0) 48%,
+    #f7f7f7
+  ); */
+}
+
+.date-picker-wheel {
+  position: absolute;
+  height: 40px;
+  top: 50%;
+  background: #bababa;
+  margin-top: -20px;
+  width: 100%;
+  display: block;
+}
+
+/* Scrollable components for day, month, and year */
+.date-picker-scroll {
+  padding: 0;
+}
+
+/* Individual items in the scrollable components */
+.date-picker-item {
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Header and confirm button */
+.date-picker-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.date-picker-confirm {
+  background-color: #007aff;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.date-picker-confirm:hover {
+  background-color: #0056b3;
+}
+
+/* Display selected date */
+.date-picker-selected-date {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #007aff; /* Change the color to your desired style */
+  white-space: nowrap; /* Prevent selected date from wrapping */
+  text-overflow: ellipsis; /* Show ellipsis for long selected date */
+  width: 100%; /* Ensure the width is 100% for centering */
+  position: absolute; /* Position it absolutely for centering */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+}

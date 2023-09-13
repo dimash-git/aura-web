@@ -1,0 +1,33 @@
+.page {
+  flex: auto;
+  height: calc(100vh - 50px);
+  max-height: -webkit-fill-available;
+  justify-content: center;
+  gap: 16px;
+}
+
+.images {
+  display: flex;
+  align-items: flex-end;
+  gap: 18px;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.profile-picture {
+  width: 96px;
+}
+
+.stars {
+  width: 116px;
+  margin-bottom: 14px;
+}
+
+.text {
+  color: #000;
+  font-weight: 600;
+  padding: 18px;
+  background-color: #e2e0e0;
+  border-radius: 24px;
+  margin-bottom: 8px;
+}

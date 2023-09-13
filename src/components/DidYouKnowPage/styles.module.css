@@ -1,0 +1,36 @@
+.page {
+    position: relative;
+    height: calc(100vh - 50px);
+    max-height: -webkit-fill-available;
+    flex: auto;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 96px;
+    justify-items: center;
+}
+
+.content {
+    text-align: center;
+
+}
+
+.zodiacInfo {
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+.skip {
+    color: gray;
+    font-weight: 500;
+    border-bottom: 1px solid gray;
+    padding-bottom: 1px;
+    cursor: pointer;
+}

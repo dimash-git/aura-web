@@ -1,0 +1,45 @@
+.modal {
+    background: rgb(14 14 14 / 80%);
+    backdrop-filter: blur(6px);
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 2000;
+    animation: appearanceBackground .6s ease-in;
+}
+
+.modal-content {
+    border-radius: 0 0 16px 16px;
+    background-color: #fff;
+    animation: appearance 0.6s ease-in;
+}
+
+header {
+    position: absolute;
+    left: 0;
+}
+
+@keyframes appearance {
+    0% {
+        margin-top: -100%;
+    }
+
+    100% {
+        margin-top: 0;
+    }
+}
+
+@keyframes appearanceBackground {
+    0% {
+        background: transparent;
+        backdrop-filter: blur(0px);
+    }
+
+    100% {
+        background: rgb(14 14 14 / 80%);
+        backdrop-filter: blur(6px);
+    }
+}

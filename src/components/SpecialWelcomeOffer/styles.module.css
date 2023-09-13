@@ -1,0 +1,40 @@
+
+
+.content {
+    padding: 0 24px 64px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-top: 28px;
+}
+
+.welcome-offer {
+    color: #717171;
+    font-weight: 500;
+}
+
+.discount-container {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.red-price {
+    color: red;
+    text-decoration: line-through;
+}
+
+.button {
+    background-color: #69e573;
+    color: #fff;
+    border-radius: 26px;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px 0;
+    border: none;
+    font-size: 14px;
+    margin-top: 16px;
+}

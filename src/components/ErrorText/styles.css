@@ -1,0 +1,31 @@
+.error-text {
+  color: #ff5c5d;
+  font-size: 12px;
+  left: 12px;
+  line-height: 16px;
+  margin-left: 12px;
+  position: absolute;
+  transform: translateY(-32px);
+  transition: all .5s;
+}
+
+.error--shown {
+  position: static;
+  transform: translateY(6px);
+}
+
+.error--hide {
+  display: none;
+}
+
+.error--small {
+  font-size: 12px;
+}
+
+.error--medium {
+  font-size: 14px;
+}
+
+.error--large {
+  font-size: 16px;
+}

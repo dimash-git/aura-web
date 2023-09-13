@@ -1,0 +1,38 @@
+@font-face {
+  font-display: swap;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/media/sf-pro-text-regular.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 500;
+  src: url(./assets/media/sf-pro-text-medium.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 600;
+  src: url(./assets/media/sf-pro-text-semibold.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: SF Pro Text;
+  font-style: normal;
+  font-weight: 700;
+  src: url(./assets/media/sf-pro-text-bold.woff) format("woff")
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "sf mono bold, sans-serif";
+  font-style: normal;
+  src: url(./assets/media/sf-mono-bold.otf) format("opentype")
+}

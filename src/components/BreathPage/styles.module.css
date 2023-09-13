@@ -1,0 +1,12 @@
+.page {
+    position: relative;
+    height: calc(100vh - 50px);
+    flex: auto;
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 96px;
+    justify-items: center;
+    background-color: #01010b;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

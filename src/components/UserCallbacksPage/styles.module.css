@@ -1,0 +1,37 @@
+.page {
+  position: relative;
+  height: calc(100vh - 50px);
+  max-height: -webkit-fill-available;
+  flex: auto;
+  background-color: #000;
+  color: #bababb;
+  overflow-y: scroll;
+  text-align: center;
+}
+
+.result-container__values {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 250px;
+  margin: 0 auto;
+}
+
+.result-container__value {
+  display: flex;
+  justify-content: space-between;
+}
+
+.result-container__value-label {
+  color: #fff;
+  font-weight: 500;
+}
+
+.result-container__value-value {
+  font-weight: 500;
+}
+
+.result-container__text {
+  line-height: 1.2;
+  margin-top: 32px;
+}

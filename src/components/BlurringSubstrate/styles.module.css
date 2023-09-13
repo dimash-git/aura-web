@@ -1,0 +1,9 @@
+.blurring-substrate {
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    width: fit-content;
+    height: fit-content;
+    padding: 8px;
+    box-shadow: inset 0px 0px 25px rgba(0,0,0,0.5);
+    border-radius: 18px;
+}
