@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 import { useCallback, useState } from "react";
 import NameInput from "./nameInput";
 // import { DatePicker } from "../DateTimePicker";
-import { IDate } from "@/services/date";
+// import { IDate } from "@/services/date";
 // import { IDate, getDateAsString } from "@/services/date";
 
 import { AICompatCategories, useApi, useApiCall } from "@/api";
@@ -21,11 +21,11 @@ function CompatibilityPage(): JSX.Element {
   const dispatch = useDispatch();
   const [isDisabled, setIsDisabled] = useState(true);
   const [isDisabledName, setIsDisabledName] = useState(true);
-  // const [isDisabledDate] = useState(true);
-  const [isDisabledDate, setIsDisabledDate] = useState(false);
+  const [isDisabledDate] = useState(false);
+  // const [isDisabledDate, setIsDisabledDate] = useState(false);
 
   const [name, setName] = useState<string>("");
-  const [date] = useState<string | IDate>("");
+  // const [date] = useState<string | IDate>("");
   // const [date, setDate] = useState<string | IDate>("");
 
   const [compatCategory, setCompatCategory] = useState(2);
