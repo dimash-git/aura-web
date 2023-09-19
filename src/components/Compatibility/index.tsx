@@ -9,26 +9,28 @@ import { IDate } from "@/services/date";
 // import { IDate, getDateAsString } from "@/services/date";
 
 import { AICompatCategories, useApi, useApiCall } from "@/api";
-// import { useNavigate } from "react-router-dom";
-// import routes from "@/routes";
-// import { useDispatch } from "react-redux";
-// import { actions } from "@/store";
-import DatePicker from "./CustomDatePicker";
+import { useNavigate } from "react-router-dom";
+import routes from "@/routes";
+import { useDispatch } from "react-redux";
+import { actions } from "@/store";
+import DatePicker from "./DatePicker";
 
 function CompatibilityPage(): JSX.Element {
   const { t, i18n } = useTranslation();
-  // const navigate = useNavigate();
-  // const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isDisabled, setIsDisabled] = useState(true);
   const [isDisabledName, setIsDisabledName] = useState(true);
-  const [isDisabledDate] = useState(true);
-  // const [isDisabledDate, setIsDisabledDate] = useState(true);
+  // const [isDisabledDate] = useState(true);
+  const [isDisabledDate, setIsDisabledDate] = useState(false);
 
   const [name, setName] = useState<string>("");
   const [date] = useState<string | IDate>("");
   // const [date, setDate] = useState<string | IDate>("");
 
   const [compatCategory, setCompatCategory] = useState(2);
+
+  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
   // const [isOpen, setIsOpen] = useState<boolean>(false);
   // const [time, setTime] = useState<Date>(new Date());
@@ -45,22 +47,31 @@ function CompatibilityPage(): JSX.Element {
   //   setTime(_time);
   // };
   const handleNext = () => {
-    console.log({
-      rightUser: {
-        name,
-        birthDate: date,
-      },
-      categoryId: compatCategory,
-    });
+    if (!selectedDate) return;
 
-    // dispatch(actions.compatibility.update({
+    // Format the selected date as "yyyy-MM-dd"
+    const formattedDate = `${selectedDate.getFullYear()}-${(
+      "0" +
+      (selectedDate.getMonth() + 1)
+    ).slice(-2)}-${("0" + selectedDate.getDate()).slice(-2)}`;
+
+    // console.log({
     //   rightUser: {
     //     name,
-    //     birthDate: date
+    //     birthDate: formattedDate,
     //   },
-    //   categoryId: compatCategory
-    // }))
-    // navigate(routes.client.compatibilityResult())
+    //   categoryId: compatCategory,
+    // });
+    dispatch(
+      actions.compatibility.update({
+        rightUser: {
+          name,
+          birthDate: formattedDate,
+        },
+        categoryId: compatCategory,
+      })
+    );
+    navigate(routes.client.compatibilityResult());
   };
 
   const api = useApi();
@@ -93,7 +104,6 @@ function CompatibilityPage(): JSX.Element {
   };
 
   // Added by me
-  // const [selectedDate, setSelectedDate] = useState<Date | null>(null);
   // const handleDateSelect = (date: Date) => {
   //   setSelectedDate(date);
   // };
@@ -129,7 +139,10 @@ function CompatibilityPage(): JSX.Element {
               onInvalid={() => setIsDisabledDate(true)}
             /> */}
             {/* <DatePicker onSelect={handleDateSelect} /> */}
-            <DatePicker />
+            <DatePicker onDateChange={setSelectedDate} />
+            {/* <div style={{ color: "wheat" }}>
+              {selectedDate && selectedDate.toString()}
+            </div> */}
           </div>
         </div>
         {data && data.length && (

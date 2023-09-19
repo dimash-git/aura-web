@@ -7,7 +7,7 @@
 }
 
 .content {
-    width: 100%;
+  width: 100%;
 }
 
 .title {
@@ -41,7 +41,7 @@
 }
 
 .input-container__date-container {
-  margin-top: 16px;
+  margin-top: 4rem;
 }
 
 .name-input-container > input {
@@ -84,10 +84,10 @@
 }
 
 .check-btn {
-    border-radius: 30px;
-    background-color: #ea445a;
-    max-width: 200px;
-    margin: 48px auto;
+  border-radius: 30px;
+  background-color: #ea445a;
+  max-width: 200px;
+  margin: 48px auto;
 }
 
 .compatibility-categories {

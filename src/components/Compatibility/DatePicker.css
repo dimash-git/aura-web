@@ -8,8 +8,8 @@
   justify-content: space-between;
   margin: 0 auto;
   color: white;
-  background: transparent;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* background: transparent; */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .date-picker-viewport {
@@ -23,6 +23,15 @@
 }
 .date-picker-viewport::-webkit-scrollbar {
   display: none; /* Chrome, Safari and Opera */
+}
+
+.date-picker-viewport:first-child .date-picker-wheel {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.date-picker-viewport:last-child .date-picker-wheel {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .date-picker-viewport::after {
@@ -46,7 +55,7 @@
   position: absolute;
   height: 40px;
   top: 50%;
-  background: #bababa;
+  background: #7a7979;
   margin-top: -20px;
   width: 100%;
   display: block;
@@ -55,6 +64,7 @@
 /* Scrollable components for day, month, and year */
 .date-picker-scroll {
   padding: 0;
+  touch-action: none;
 }
 
 /* Individual items in the scrollable components */
@@ -66,6 +76,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #a09b9b;
+}
+.date-picker-item.selected {
+  color: white;
 }
 
 /* Header and confirm button */

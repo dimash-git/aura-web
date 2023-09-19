@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DatePicker.css";
-import DatePickerItem from "./CustomDatePickerItem";
+import DatePickerItem from "./DatePickerItem";
 
-// interface DatePickerProps {
-//   onSelect: (selectedDate: Date) => void;
-// }
+interface DatePickerProps {
+  onDateChange: (selectedDate: Date) => void;
+}
 
-const DatePicker: React.FC = () => {
+const DatePicker: React.FC<DatePickerProps> = ({ onDateChange }) => {
   const currentDate = new Date();
   const [selectedDate, setSelectedDate] = useState<Date>(currentDate);
 
@@ -36,6 +36,12 @@ const DatePicker: React.FC = () => {
     setSelectedDate(newDate);
   };
 
+  useEffect(() => {
+    if (onDateChange) {
+      onDateChange(selectedDate); // Call the callback when selectedDate changes
+    }
+  }, [selectedDate, onDateChange]);
+
   return (
     <>
       <div className="date-picker-container">
@@ -62,11 +68,11 @@ const DatePicker: React.FC = () => {
         />
       </div>
       <div className="date-picker-selected-date">
-        {selectedDate.toLocaleDateString("en-US", {
+        {/* {selectedDate.toLocaleDateString("en-US", {
           year: "numeric",
           month: "long",
           day: "numeric",
-        })}
+        })} */}
       </div>
     </>
   );
